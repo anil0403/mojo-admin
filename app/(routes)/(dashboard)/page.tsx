@@ -5,7 +5,8 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 export default function Home() {
   return (
     <div>
-      <Button>Click me</Button>
+      <h1>Dashboard</h1>
+      <ThemeToggle />
     </div>
   );
 }
