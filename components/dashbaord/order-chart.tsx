@@ -1,4 +1,5 @@
 "use client"; // This is a magic comment that tells Vercel to use the browser version of the module
+import { Label } from "@radix-ui/react-label";
 import React from "react";
 import {
   LineChart,
@@ -100,8 +101,8 @@ const data = [
 
 const OrdersChart = () => {
   return (
-    <div>
-      <div className="h-[350px] border-2 p-4 rounded-lg flex items-center">
+    <div className="grid grid-cols-5">
+      <div className="h-[350px] border-2 p-4 rounded-lg flex items-center col-span-4">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={data}
@@ -173,6 +174,12 @@ const OrdersChart = () => {
             />
           </LineChart>
         </ResponsiveContainer>
+      </div>
+      <div className="col-span-1 flex flex-col justify-center items-start gap-5 px-5">
+        <Label className="bg-[#3b82f6] p-2 rounded-lg w-full">Total Orders : 4300</Label>
+        <Label className="bg-[#22c55e] p-2 rounded-lg w-full">Successful : 4000</Label>
+        <Label className="bg-[#e20809] p-2 rounded-lg w-full">Canceled : 300</Label>
+
       </div>
     </div>
   );
