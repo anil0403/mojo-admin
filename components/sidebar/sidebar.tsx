@@ -28,7 +28,7 @@ const Sidebar = () => {
       <div className="flex flex-col space-y-1 justify-between">
         <Button
           className="justify-start"
-          variant={pathname === "/" ? "secondary" : "ghost"}
+          variant={pathname === "/" ? "default" : "ghost"}
           asChild
         >
           <Link href="/" className="flex items-center gap-2">
@@ -38,7 +38,7 @@ const Sidebar = () => {
         </Button>
         <Button
           className="justify-start"
-          variant={pathname === "/admins" ? "secondary" : "ghost"}
+          variant={pathname === "/admins" ? "default" : "ghost"}
           asChild
         >
           <Link href="/admins" className="flex items-center gap-2">
@@ -49,7 +49,7 @@ const Sidebar = () => {
 
         <Button
           className="justify-start"
-          variant={pathname === "/users" ? "secondary" : "ghost"}
+          variant={pathname === "/users" ? "default" : "ghost"}
           asChild
         >
           <Link href="/users" className="flex items-center gap-2">
@@ -60,7 +60,7 @@ const Sidebar = () => {
 
         <Button
           className="justify-start"
-          variant={pathname === "/riders" ? "secondary" : "ghost"}
+          variant={pathname === "/riders" ? "default" : "ghost"}
           asChild
         >
           <Link href="/riders" className="flex items-center gap-2">
@@ -71,7 +71,7 @@ const Sidebar = () => {
 
         <Button
           className="justify-start"
-          variant={pathname === "/orders" ? "secondary" : "ghost"}
+          variant={pathname === "/orders" ? "default" : "ghost"}
           asChild
         >
           <Link href="/orders" className="flex items-center gap-2">
@@ -82,7 +82,7 @@ const Sidebar = () => {
 
         <Button
           className="justify-start"
-          variant={pathname === "/payments" ? "secondary" : "ghost"}
+          variant={pathname === "/payments" ? "default" : "ghost"}
           asChild
         >
           <Link href="/payments" className="flex items-center gap-2">
@@ -93,7 +93,7 @@ const Sidebar = () => {
 
         <Button
           className="justify-start"
-          variant={pathname === "/refunds" ? "secondary" : "ghost"}
+          variant={pathname === "/refunds" ? "default" : "ghost"}
           asChild
         >
           <Link href="/refunds" className="flex items-center gap-2">
@@ -108,7 +108,7 @@ const Sidebar = () => {
           <div className="flex flex-col space-y-1 justify-between">
             <Button
               className="justify-start"
-              variant={pathname === "/products" ? "secondary" : "ghost"}
+              variant={pathname === "/products" ? "default" : "ghost"}
               asChild
             >
               <Link href="/products" className="flex items-center gap-2">
@@ -118,7 +118,7 @@ const Sidebar = () => {
             </Button>
             <Button
               className="justify-start"
-              variant={pathname === "/categories" ? "secondary" : "ghost"}
+              variant={pathname === "/categories" ? "default" : "ghost"}
               asChild
             >
               <Link href="/categories" className="flex items-center gap-2">

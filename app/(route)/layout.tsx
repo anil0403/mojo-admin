@@ -11,7 +11,7 @@ const Layout = ({ children }: LayoutProps) => {
       <div className="max-w-fit border-2 rounded-lg">
         <Sidebar />
       </div>
-      <div className="w-full p-2 border-2 rounded-lg min-h-[95dvh]">{children}</div>
+      <div className="w-full border-2 rounded-lg min-h-[95dvh]">{children}</div>
     </div>
   );
 };
