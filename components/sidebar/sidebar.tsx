@@ -4,11 +4,9 @@ import {
   DollarSign,
   LayoutDashboard,
   ListOrderedIcon,
-  PartyPopper,
-  Settings,
   ShoppingCart,
   UndoDot,
-  User2,
+  Container,
   UserCircle,
   Users,
 } from "lucide-react";
@@ -102,6 +100,18 @@ const Sidebar = () => {
               <span className="font-medium text-medium ">Refunds</span>
             </Link>
           </Button>
+
+          <Button
+            className="justify-start"
+            variant={pathname === "/suppliers" ? "default" : "ghost"}
+            asChild
+          >
+            <Link href="/suppliers" className="flex items-center gap-2">
+              <Container size={18} />
+              <span className="font-medium text-medium ">Suppliers</span>
+            </Link>
+          </Button>
+
           <div className="w-full">
             <h1 className="text-muted-foreground text-sm font-medium">
               Inventory
