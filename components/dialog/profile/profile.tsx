@@ -26,7 +26,7 @@ const ProfileDialog = () => {
         <DialogHeader>
           <DialogTitle>Profile</DialogTitle>
           <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
+            Make changes to your profile here. Click save when you&apos;re done.
           </DialogDescription>
         </DialogHeader>
         <ThemeToggle />
