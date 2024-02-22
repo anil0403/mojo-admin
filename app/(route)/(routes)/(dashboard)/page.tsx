@@ -8,8 +8,6 @@ import {
 } from "@/components/ui/card";
 import { Users, ListOrderedIcon, AlignJustify, LineChart } from "lucide-react";
 import Link from "next/link";
-import DashboardChart from "@/components/dashbaord/chart";
-import Example from "@/components/dashbaord/chart";
 import OrdersChart from "@/components/dashbaord/order-chart";
 
 export default function Home() {
@@ -157,7 +155,6 @@ export default function Home() {
         </Card>
       </div>
       <OrdersChart />
-      {/* <DashboardChart /> */}
     </div>
   );
 }

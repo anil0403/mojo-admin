@@ -177,23 +177,12 @@ const OrdersChart = () => {
       </div>
       <div className="flex flex-col gap-5 justify-center">
         <Label className="w-[120px]  bg-sky-500 flex flex-col  items-center justify-center p-4 rounded-lg">
-          <span className="whitespace-nowrap p-4 font-medium">
+          <span className="whitespace-nowrap px-4 font-medium">
             Total Orders:{" "}
           </span>
           <span className="text-lg font-semibold">4300 </span>
         </Label>
-        <Label className="w-[120px]  aspect-auto bg-sky-500 flex flex-col  items-center justify-center p-4 rounded-lg">
-          <span className="whitespace-nowrap p-4 font-medium">
-            Total Orders:{" "}
-          </span>
-          <span className="text-lg font-semibold">4300 </span>
-        </Label>
-        <Label className="w-[120px]  aspect-auto bg-sky-500 flex flex-col  items-center justify-center p-4 rounded-lg">
-          <span className="whitespace-nowrap p-4 font-medium">
-            Total Orders:{" "}
-          </span>
-          <span className="text-lg font-semibold">4300 </span>
-        </Label>
+
       </div>
     </div>
   );
