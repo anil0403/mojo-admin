@@ -109,7 +109,7 @@ const AddProductPage = () => {
 
   return (
     <div>
-      <h1 className="text-lg font-medium py-1 "> Add Products</h1>
+      <h1 className="text-lg font-medium py-1 "> Update Products</h1>
       <Separator />
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="py-5 space-y-5">
@@ -517,7 +517,7 @@ const AddProductPage = () => {
             </div>
           </div>
 
-          <Button type="submit">Add Product</Button>
+          <Button type="submit">Update Product</Button>
         </form>
       </Form>
     </div>

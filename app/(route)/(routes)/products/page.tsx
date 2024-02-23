@@ -9,7 +9,7 @@ import Link from "next/link";
 const ProductsPage = () => {
   return (
     <div className="flex flex-col">
-      <h1 className="text-lg font-medium py-1 ">Products</h1>
+      <h1 className="text-lg font-medium py-1 ">All Products</h1>
       <Separator />
       <div className="py-4 flex items-center  justify-between">
         <Suspense fallback={<div>...</div>}>

@@ -11,6 +11,7 @@ import {
 
 import { DotsHorizontalIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface CellActionProps {
   product: any;
@@ -33,7 +34,11 @@ const CellAction = ({ product }: CellActionProps) => {
           Copy Supplier Id
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem className="text-purple-800">Edit</DropdownMenuItem>
+        <DropdownMenuItem className="text-purple-800">
+          <Link className="w-full" href={`/products/${product?.product_id}/edit`}>
+            Edit
+          </Link>
+        </DropdownMenuItem>
         <DropdownMenuItem className="text-red-800"> Delete</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
