@@ -1,6 +1,6 @@
 import Sidebar from "@/components/sidebar/sidebar";
 import React from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 interface LayoutProps {
   children?: React.ReactNode;
@@ -14,6 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
       </div>
       <ScrollArea className="w-full border-2 rounded-lg h-[95dvh]">
         {children}
+        <ScrollBar orientation="horizontal" />
       </ScrollArea>
     </div>
   );
