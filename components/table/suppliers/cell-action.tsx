@@ -2,7 +2,6 @@
 import React from "react";
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
@@ -29,7 +28,7 @@ const CellAction = ({ supplier }: CellActionProps) => {
       <DropdownMenuContent align="end">
         <DropdownMenuLabel>Actions</DropdownMenuLabel>
         <DropdownMenuItem
-          onClick={() => navigator.clipboard.writeText(supplier?.id)}
+          onClick={() => navigator.clipboard.writeText(supplier?.supplier_id)}
         >
           Copy Supplier Id
         </DropdownMenuItem>

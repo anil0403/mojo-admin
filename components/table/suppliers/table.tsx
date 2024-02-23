@@ -14,42 +14,102 @@ const suppliers = [
   {
     id: "1",
     name: "Diwash Bhattrai",
-    supplier_id : "S782105436",
+    supplier_id: "S782105436",
     phone: "9841234567",
     address: "Old Baneshwor, Kathmandu",
     email: "bhattraidiwash@gmail.com",
     pan: "056879543",
-    items : "5"
+    items: "5",
   },
   {
     id: "2",
     name: "Diwash Bhattrai",
-    supplier_id : "S782105436",
+    supplier_id: "S782105436",
     phone: "9841234567",
     address: "Old Baneshwor, Kathmandu",
     email: "bhattraidiwash@gmail.com",
     pan: "056879543",
-    items : "5"
+    items: "5",
   },
   {
     id: "3",
     name: "Diwash Bhattrai",
-    supplier_id : "S782105436",
+    supplier_id: "S782105436",
     phone: "9841234567",
     address: "Old Baneshwor, Kathmandu",
     email: "bhattraidiwash@gmail.com",
     pan: "056879543",
-    items : "5"
+    items: "5",
   },
   {
     id: "4",
     name: "Diwash Bhattrai",
-    supplier_id : "S782105436",
+    supplier_id: "S782105436",
     phone: "9841234567",
     address: "Old Baneshwor, Kathmandu",
     email: "bhattraidiwash@gmail.com",
     pan: "056879543",
-    items : "5"
+    items: "5",
+  },
+  {
+    id: "5",
+    name: "Diwash Bhattrai",
+    supplier_id: "S782105436",
+    phone: "9841234567",
+    address: "Old Baneshwor, Kathmandu",
+    email: "bhattraidiwash@gmail.com",
+    pan: "056879543",
+    items: "5",
+  },
+  {
+    id: "6",
+    name: "Diwash Bhattrai",
+    supplier_id: "S782105436",
+    phone: "9841234567",
+    address: "Old Baneshwor, Kathmandu",
+    email: "bhattraidiwash@gmail.com",
+    pan: "056879543",
+    items: "5",
+  },
+  {
+    id: "7",
+    name: "Diwash Bhattrai",
+    supplier_id: "S782105436",
+    phone: "9841234567",
+    address: "Old Baneshwor, Kathmandu",
+    email: "bhattraidiwash@gmail.com",
+    pan: "056879543",
+    items: "8",
+  },
+  {
+    id: "8",
+    name: "Diwash Bhattrai",
+    supplier_id: "S782105436",
+    phone: "9841234567",
+    address: "Old Baneshwor, Kathmandu",
+    email: "bhattraidiwash@gmail.com",
+    pan: "056879543",
+    items: "5",
+  },
+  {
+    id: "9",
+    name: "Diwash Bhattrai",
+    supplier_id: "S782105436",
+    phone: "9841234567",
+    address: "Old Baneshwor, Kathmandu",
+    email: "bhattraidiwash@gmail.com",
+    pan: "056879543",
+    items: "5",
+  },
+  {
+    id: "10",
+    name: "Diwash Bhattrai",
+    supplier_id: "S782105436",
+    phone: "9841234567",
+    address: "Old Baneshwor, Kathmandu",
+    email: "bhattraidiwash@gmail.com",
+    pan: "056879543",
+    items: "5",
   },
 ];
 
@@ -60,14 +120,13 @@ export function TableDemo() {
       <TableHeader>
         <TableRow>
           <TableHead>S.N</TableHead>
-          <TableHead>Name</TableHead>
           <TableHead>Supplier Id</TableHead>
+          <TableHead>Name</TableHead>
           <TableHead>Phone</TableHead>
           {/* <TableHead>Email</TableHead> */}
           <TableHead>Pan Number</TableHead>
           <TableHead>Address</TableHead>
           <TableHead>Items</TableHead>
-
         </TableRow>
       </TableHeader>
       <TableBody>

@@ -6,7 +6,7 @@ import TablePagination from "@/components/pagination/Pagination";
 import { TableDemo } from "@/components/table/suppliers/table";
 const SuppliersPage = () => {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col">
       <h1 className="text-lg font-medium ">Suppliers</h1>
       <Separator />
       <div className="py-4 flex items-center  justify-between">
