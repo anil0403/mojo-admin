@@ -3,6 +3,7 @@ import React from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
 import { Input } from "../ui/input";
+import { Suspense } from "react";
 
 interface SearchProps {
   placeholder?: string;
@@ -26,12 +27,14 @@ const Search = ({ placeholder }: SearchProps) => {
   // const set.params("page",1);
 
   return (
-    <Input
-      onChange={handleSearch}
-      type="text"
-      placeholder={`Search ${placeholder}...`}
-      className="h-10 max-w-fit"
-    />
+    <Suspense>
+      <Input
+        onChange={handleSearch}
+        type="text"
+        placeholder={`Search ${placeholder}...`}
+        className="h-10 max-w-fit"
+      />
+    </Suspense>
   );
 };
 
