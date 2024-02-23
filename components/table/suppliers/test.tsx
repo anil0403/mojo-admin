@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import CellAction from "../action/cell-action";
 
 const suppliers = [
   {
@@ -25,14 +26,16 @@ const suppliers = [
     address: "Old Baneshwor, Kathmandu",
     email: "bhattraidiwash@gmail.com",
     pan: "056879543",
-  },  {
+  },
+  {
     id: "1",
     name: "Diwash Bhattrai",
     phone: "9841234567",
     address: "Old Baneshwor, Kathmandu",
     email: "bhattraidiwash@gmail.com",
     pan: "056879543",
-  },  {
+  },
+  {
     id: "1",
     name: "Diwash Bhattrai",
     phone: "9841234567",
@@ -53,18 +56,21 @@ export function TableDemo() {
           <TableHead>Phone</TableHead>
           <TableHead>Email</TableHead>
           <TableHead>Pan Number</TableHead>
-          <TableHead className="text-right">Address</TableHead>
+          <TableHead>Address</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
-        {suppliers.map((supplier) => (
-          <TableRow key={supplier.id}>
-            <TableCell className="font-medium">{supplier.id}</TableCell>
-            <TableCell>{supplier.name}</TableCell>
-            <TableCell>{supplier.phone}</TableCell>
-            <TableCell>{supplier.email}</TableCell>
-            <TableCell>{supplier.pan}</TableCell>
-            <TableCell className="text-right">{supplier.address}</TableCell>
+        {suppliers?.map((supplier) => (
+          <TableRow key={supplier?.id}>
+            <TableCell className="font-medium">{supplier?.id}</TableCell>
+            <TableCell>{supplier?.name}</TableCell>
+            <TableCell>{supplier?.phone}</TableCell>
+            <TableCell>{supplier?.email}</TableCell>
+            <TableCell>{supplier?.pan}</TableCell>
+            <TableCell>{supplier?.address}</TableCell>
+            <TableCell>
+              <CellAction supplier= {supplier}/>
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>
