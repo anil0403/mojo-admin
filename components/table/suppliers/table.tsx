@@ -100,6 +100,10 @@ const suppliers = [
     email: "bhattraidiwash@gmail.com",
     pan: "056879543",
     items: "5",
+    bank_name: "Siddharth Bank Ltd.",
+    bank_account_holder_name: "Siddharth Bank Ltd.",
+    bank_account_number: "1234567890123456",
+    qr: "https://www.google.com",
   },
   {
     id: "10",
@@ -113,7 +117,7 @@ const suppliers = [
   },
 ];
 
-export function TableDemo() {
+export function SupplierTable() {
   return (
     <Table>
       {/* <TableCaption>A list of your recent suppliers.</TableCaption> */}

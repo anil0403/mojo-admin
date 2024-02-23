@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator";
 import Search from "@/components/search/search";
 import { Button } from "@/components/ui/button";
 import TablePagination from "@/components/pagination/Pagination";
-import { TableDemo } from "@/components/table/suppliers/table";
+import { SupplierTable } from "@/components/table/suppliers/table";
 const SuppliersPage = () => {
   return (
     <div className="flex flex-col">
@@ -16,7 +16,7 @@ const SuppliersPage = () => {
         <TablePagination />
         <Button size="default">Add New Supplier</Button>
       </div>
-      <TableDemo />
+      <SupplierTable />
     </div>
   );
 };
