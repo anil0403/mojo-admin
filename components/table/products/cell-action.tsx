@@ -34,8 +34,16 @@ const CellAction = ({ product }: CellActionProps) => {
           Copy Supplier Id
         </DropdownMenuItem>
         <DropdownMenuSeparator />
+        <DropdownMenuItem className="text-blue-800">
+          <Link className="w-full" href={`/products/${product?.product_id}`}>
+            View
+          </Link>
+        </DropdownMenuItem>
         <DropdownMenuItem className="text-purple-800">
-          <Link className="w-full" href={`/products/${product?.product_id}/edit`}>
+          <Link
+            className="w-full"
+            href={`/products/${product?.product_id}/edit`}
+          >
             Edit
           </Link>
         </DropdownMenuItem>
