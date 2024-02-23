@@ -1,5 +1,6 @@
 import Sidebar from "@/components/sidebar/sidebar";
 import React from "react";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface LayoutProps {
   children?: React.ReactNode;
@@ -11,7 +12,9 @@ const Layout = ({ children }: LayoutProps) => {
       <div className="max-w-fit border-2 rounded-lg">
         <Sidebar />
       </div>
-      <div className="w-full border-2 rounded-lg min-h-[95dvh]">{children}</div>
+      <ScrollArea className="w-full border-2 rounded-lg h-[95dvh]">
+        {children}
+      </ScrollArea>
     </div>
   );
 };

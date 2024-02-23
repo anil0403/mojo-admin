@@ -9,10 +9,12 @@ import {
 import { Users, ListOrderedIcon, AlignJustify, LineChart } from "lucide-react";
 import Link from "next/link";
 import OrdersChart from "@/components/dashbaord/order-chart";
+import RevenueChart from "@/components/dashbaord/revenue-chart";
+
 
 export default function Home() {
   return (
-    <div>
+    <div >
       <h1 className="text-lg font-medium ">Dashboard</h1>
       <Separator />
       <div className="flex gap-5 py-4">
@@ -154,7 +156,11 @@ export default function Home() {
           </CardFooter>
         </Card>
       </div>
+      <div className="space-y-5">
       <OrdersChart />
+      <RevenueChart />
+      </div>
+
     </div>
   );
 }

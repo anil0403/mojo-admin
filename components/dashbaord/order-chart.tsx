@@ -114,7 +114,7 @@ const OrdersChart = () => {
             }}
           >
             {/* <CartesianGrid strokeDasharray="3 3" /> */}
-            <XAxis   dataKey="name" />
+            <XAxis dataKey="name" />
             {/* <YAxis /> */}
             <Tooltip
               content={({ active, payload }: any) => {
@@ -161,7 +161,7 @@ const OrdersChart = () => {
             <Line
               type="monotone"
               dataKey="Total Successful"
-              stroke="#22c55e"
+              stroke="#027200"
               strokeWidth={2}
               activeDot={{ r: 8 }}
             />
@@ -175,11 +175,19 @@ const OrdersChart = () => {
           </LineChart>
         </ResponsiveContainer>
       </div>
-      <div className="col-span-1 flex flex-col justify-center items-start gap-5 px-5">
-        <Label className="bg-[#3b82f6] p-2 rounded-lg w-full">Total Orders : 4300</Label>
-        <Label className="bg-[#22c55e] p-2 rounded-lg w-full">Successful : 4000</Label>
-        <Label className="bg-[#e20809] p-2 rounded-lg w-full">Canceled : 300</Label>
-
+      <div className="col-span-1 flex flex-col justify-between items-center gap-5 px-5">
+        <Label className="w-[120px] flex flex-col justify-center items-center border-2 rounded-lg px-4 py-2">
+          <span className="whitespace-nowrap p-4">Total Orders</span>
+          <span className="text-lg font-semibold">4300</span>
+        </Label>
+        <Label className="w-[120px] flex flex-col justify-center items-center border-2 rounded-lg px-4 py-2">
+          <span className="whitespace-nowrap p-4">Successful</span>
+          <span className="text-lg font-semibold">4000</span>
+        </Label>
+        <Label className="w-[120px] flex flex-col justify-center items-center border-2 rounded-lg px-4 py-2">
+          <span className="whitespace-nowrap p-4">Canceled</span>
+          <span className="text-lg font-semibold">300</span>
+        </Label>
       </div>
     </div>
   );
