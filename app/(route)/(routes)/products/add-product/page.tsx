@@ -119,9 +119,11 @@ const AddProductPage = () => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>
+                    Name <span className="text-red-500">*</span>
+                  </FormLabel>
                   <FormControl>
-                    <Input placeholder="name of product" {...field} />
+                    <Input required placeholder="name of product" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -132,7 +134,10 @@ const AddProductPage = () => {
               name="weight"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Weight</FormLabel>
+                  <FormLabel>
+                    Weight
+                    <span className="text-red-500">*</span>
+                  </FormLabel>
                   <FormControl>
                     <Input placeholder="weight of product" {...field} />
                   </FormControl>
@@ -146,7 +151,10 @@ const AddProductPage = () => {
               name="stock"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Stock</FormLabel>
+                  <FormLabel>
+                    Stock
+                    <span className="text-red-500">*</span>
+                  </FormLabel>
                   <FormControl>
                     <Input placeholder="Stock (Quantity)" {...field} />
                   </FormControl>
@@ -160,7 +168,10 @@ const AddProductPage = () => {
               name="mrp"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>MRP</FormLabel>
+                  <FormLabel>
+                    MRP
+                    <span className="text-red-500">*</span>
+                  </FormLabel>
                   <FormControl>
                     <Input placeholder="Market Price [NPR]" {...field} />
                   </FormControl>
@@ -173,7 +184,10 @@ const AddProductPage = () => {
               name="cp"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>CP</FormLabel>
+                  <FormLabel>
+                    CP
+                    <span className="text-red-500">*</span>
+                  </FormLabel>
                   <FormControl>
                     <Input placeholder="Cost Price [NPR]" {...field} />
                   </FormControl>
@@ -187,7 +201,10 @@ const AddProductPage = () => {
               name="sub_category_id"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Select Category</FormLabel>
+                  <FormLabel>
+                    Select Category
+                    <span className="text-red-500">*</span>
+                  </FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
@@ -214,7 +231,10 @@ const AddProductPage = () => {
               name="supplier_id"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Select Supplier</FormLabel>
+                  <FormLabel>
+                    Select Supplier
+                    <span className="text-red-500">*</span>
+                  </FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
@@ -242,7 +262,10 @@ const AddProductPage = () => {
               name="expiry_date"
               render={({ field }) => (
                 <FormItem className="flex flex-col">
-                  <FormLabel>Expiry Date</FormLabel>
+                  <FormLabel>
+                    Expiry Date
+                    <span className="text-red-500">*</span>
+                  </FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
@@ -282,7 +305,10 @@ const AddProductPage = () => {
               name="limit"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Limit</FormLabel>
+                  <FormLabel>
+                    Limit
+                    <span className="text-red-500">*</span>
+                  </FormLabel>
                   <FormControl>
                     <Input placeholder="limit in %..." {...field} />
                   </FormControl>
@@ -468,10 +494,7 @@ const AddProductPage = () => {
                 </FormItem>
               )}
             />
-            <div>
-              <Label>Picture</Label>
-              <Input name="picture" type="file" />
-            </div>
+            <Input name="picture" type="file" />
 
             <div className="col-span-3">
               <FormField
