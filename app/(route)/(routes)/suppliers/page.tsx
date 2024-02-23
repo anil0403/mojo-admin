@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator";
 import Search from "@/components/search/search";
 import { Button } from "@/components/ui/button";
 import TablePagination from "@/components/pagination/Pagination";
-import { TableDemo } from "@/components/table/suppliers/test";
+import { TableDemo } from "@/components/table/suppliers/table";
 const SuppliersPage = () => {
   return (
     <div className="flex flex-col gap-5">
