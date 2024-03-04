@@ -11,14 +11,18 @@ const ProductsPage = () => {
     <div className="flex flex-col">
       <h1 className="text-lg font-medium py-1 ">All Products</h1>
       <Separator />
-      <div className="py-4 flex items-center  justify-between">
-        <Suspense fallback={<div>...</div>}>
-          <Search placeholder="product" />
-        </Suspense>
-        <TablePagination />
-        <Button asChild size="default">
+      <div className="py-4 flex  justify-between">
+          <Suspense fallback={<div>...</div>}>
+            <Search placeholder="product" />
+          </Suspense>
+        <div>
+          <TablePagination />
+        </div>
+
+        {/* <Button>Button</Button> */}
+        {/* <Button asChild size="default">
           <Link href="/products/add-product">Add Product</Link>
-        </Button>
+        </Button> */}
       </div>
       <ProductTable />
     </div>

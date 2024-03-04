@@ -10,7 +10,7 @@ import {
 
 const TablePagination = () => {
   return (
-    <Pagination>
+    <Pagination className="max-w-fit">
       <PaginationContent>
         <PaginationItem>
           <PaginationPrevious href="/suppliers/?page=1" />

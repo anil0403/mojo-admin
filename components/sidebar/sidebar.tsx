@@ -9,12 +9,21 @@ import {
   Container,
   UserCircle,
   Users,
+  Layers,
+  CalendarFold,
+  PlusCircle,
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 import ProfileDialog from "../dialog/profile/profile";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -116,17 +125,71 @@ const Sidebar = () => {
             <h1 className="text-muted-foreground text-sm font-medium">
               Inventory
             </h1>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Products</AccordionTrigger>
+                <AccordionContent className="flex flex-col space-y-1">
+                  <Button
+                    className="justify-start w-full"
+                    variant={pathname === "/products" ? "default" : "ghost"}
+                    asChild
+                  >
+                    <Link href="/products" className="flex items-center gap-2">
+                      <ListOrderedIcon size={18} />
+
+                      <span className="font-medium text-medium ">
+                        All Products
+                      </span>
+                    </Link>
+                  </Button>
+
+                  <Button
+                    className="justify-start w-full"
+                    variant={pathname === "/low-stock" ? "default" : "ghost"}
+                    asChild
+                  >
+                    <Link href="/products" className="flex items-center gap-2">
+                      <Layers size={18} />
+                      <span className="font-medium text-medium ">
+                        Low Stock
+                      </span>
+                    </Link>
+                  </Button>
+
+                  <Button
+                    className="justify-start w-full"
+                    variant={pathname === "/low-expiry" ? "default" : "ghost"}
+                    asChild
+                  >
+                    <Link href="/products" className="flex items-center gap-2">
+                      <CalendarFold size={18} />
+                      <span className="font-medium text-medium ">
+                        Low Expiry
+                      </span>
+                    </Link>
+                  </Button>
+
+                  <Button
+                    className="justify-start w-full"
+                    variant={pathname === "/add-product" ? "default" : "ghost"}
+                    asChild
+                  >
+                    <Link
+                      href="/add-product"
+                      className="flex items-center gap-2"
+                    >
+                      <PlusCircle size={18} />
+
+                      <span className="font-medium text-medium ">
+                        Add Products
+                      </span>
+                    </Link>
+                  </Button>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
             <div className="flex flex-col space-y-1 justify-between">
-              <Button
-                className="justify-start"
-                variant={pathname === "/products" ? "default" : "ghost"}
-                asChild
-              >
-                <Link href="/products" className="flex items-center gap-2">
-                  <ListOrderedIcon size={18} />
-                  <span className="font-medium text-medium ">Products</span>
-                </Link>
-              </Button>
               <Button
                 className="justify-start"
                 variant={pathname === "/categories" ? "default" : "ghost"}

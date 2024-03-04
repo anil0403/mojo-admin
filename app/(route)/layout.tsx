@@ -9,9 +9,11 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex gap-5 px-2 min-h-screen justify-center items-center">
-      <div className="max-w-fit border-2 rounded-lg">
+      <ScrollArea className=" min-w-fit border-2 rounded-lg h-[95dvh]">
         <Sidebar />
-      </div>
+        <ScrollBar orientation="vertical" />
+      </ScrollArea>
+
       <ScrollArea className="w-full border-2 rounded-lg h-[95dvh]">
         {children}
         <ScrollBar orientation="horizontal" />
