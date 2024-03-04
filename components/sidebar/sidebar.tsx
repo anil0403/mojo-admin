@@ -255,7 +255,7 @@ const Sidebar = () => {
           >
             <Link href="/suggestion" className="flex items-center gap-2">
               <MessageCircleQuestion size={18} />
-              <span className="font-medium text-medium ">Suggestion</span>
+              <span className="font-medium text-medium ">Customer Suggestion</span>
             </Link>
           </Button>
 
@@ -267,7 +267,7 @@ const Sidebar = () => {
           >
             <Link href="/support" className="flex items-center gap-2">
               <MessageSquare size={18} />
-              <span className="font-medium text-medium ">Support</span>
+              <span className="font-medium text-medium ">Customer Support</span>
             </Link>
           </Button>
 
