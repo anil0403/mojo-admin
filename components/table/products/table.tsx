@@ -306,7 +306,6 @@ export function ProductTable() {
           <TableHead>Stock</TableHead>
           <TableHead>Expire In</TableHead>
           <TableHead>Expiry Date</TableHead>
-
           <TableHead>Category</TableHead>
         </TableRow>
       </TableHeader>
@@ -326,7 +325,6 @@ export function ProductTable() {
             <TableCell>{product?.stock}</TableCell>
             <TableCell>90 days</TableCell>
             <TableCell>{product?.expiry_date}</TableCell>
-
             <TableCell>{product?.sub_category_id}</TableCell>
             <TableCell>
               <CellAction product={product} />
