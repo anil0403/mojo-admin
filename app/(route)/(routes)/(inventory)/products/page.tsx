@@ -12,9 +12,11 @@ const ProductsPage = () => {
       <h1 className="text-lg font-medium py-1 ">All Products</h1>
       <Separator />
       <div className="py-4 flex  justify-between">
-          <Suspense fallback={<div>...</div>}>
-            <Search placeholder="product" />
-          </Suspense>
+        <Suspense fallback={<div>...</div>}>
+          <Search
+            searchItems={["Search By Id", "Search By Name", "Search By Stock"]}
+          />
+        </Suspense>
         <div>
           <TablePagination />
         </div>

@@ -15,8 +15,13 @@ import {
 
 interface SearchProps {
   placeholder?: string;
+  searchItems?: string[];
 }
-const Search = ({ placeholder }: SearchProps) => {
+const Search = ({searchItems }: SearchProps) => {
+  const [search, setSearch] = React.useState<string>(
+    searchItems ? searchItems[0] : "Search..."
+  );
+
   const searchParams = useSearchParams();
   const { replace } = useRouter();
   const pathname = usePathname();
@@ -32,7 +37,6 @@ const Search = ({ placeholder }: SearchProps) => {
     }
   }, 200);
 
-  const [search, setSearch] = React.useState<string>("search-by-id");
   console.log(search);
 
   return (
@@ -43,20 +47,28 @@ const Search = ({ placeholder }: SearchProps) => {
         placeholder={search}
         className="h-10 min-w-fit"
       />
-      <Select defaultValue="search-by-id" onValueChange={(value) => setSearch(value)}>
-        <SelectTrigger className="w-[350px]">
-          <SelectValue placeholder="Change Searches" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectGroup>
-            <SelectItem value="search-by-id">
-              Search By Id
-            </SelectItem>
-            <SelectItem value="search-by-name">Search By Name</SelectItem>
-            <SelectItem value="search-by-stock">Search By Stock</SelectItem>
-          </SelectGroup>
-        </SelectContent>
-      </Select>
+      {searchItems && (
+        <Select
+          defaultValue="search-by-id"
+          onValueChange={(value) => setSearch(value)}
+        >
+          <SelectTrigger className="w-[350px]">
+            <SelectValue placeholder="Change Searches" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              {searchItems?.map((item) => (
+                <SelectItem
+                  key={item}
+                  value={item.replace(/\s+/g, "-").toLowerCase()}
+                >
+                  {item}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      )}
     </div>
   );
 };
