@@ -272,7 +272,7 @@ const AddProductPage = () => {
                         <Button
                           variant={"outline"}
                           className={cn(
-                            "w-[240px] pl-3 text-left font-normal",
+                            "w-full pl-3 text-left font-normal",
                             !field.value && "text-muted-foreground"
                           )}
                         >
@@ -404,7 +404,7 @@ const AddProductPage = () => {
                         <Button
                           variant={"outline"}
                           className={cn(
-                            "w-[240px] pl-3 text-left font-normal",
+                            "w-full pl-3 text-left font-normal",
                             !field.value && "text-muted-foreground"
                           )}
                         >
@@ -494,6 +494,7 @@ const AddProductPage = () => {
                 </FormItem>
               )}
             />
+            
             <Input required name="picture" type="file" />
 
             <div className="col-span-3">
