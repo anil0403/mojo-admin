@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/table";
 import CellAction from "./cell-action";
 import Link from "next/link";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const products = [
   {
@@ -307,6 +308,8 @@ export function ProductTable() {
           <TableHead>Expire In</TableHead>
           <TableHead>Expiry Date</TableHead>
           <TableHead>Category</TableHead>
+          <TableHead>Thumbnail</TableHead>
+
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -326,6 +329,17 @@ export function ProductTable() {
             <TableCell>90 days</TableCell>
             <TableCell>{product?.expiry_date}</TableCell>
             <TableCell>{product?.sub_category_id}</TableCell>
+            <TableCell>
+              <Avatar>
+                <AvatarImage src="#" alt="@shadcn" />
+                <AvatarFallback>P</AvatarFallback>
+              </Avatar>
+
+            </TableCell>
+
+
+
+
             <TableCell>
               <CellAction product={product} />
             </TableCell>
