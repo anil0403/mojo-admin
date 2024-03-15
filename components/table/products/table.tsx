@@ -301,9 +301,6 @@ export function ProductTable() {
           <TableHead>S.N</TableHead>
           <TableHead>product Id</TableHead>
           <TableHead>Name</TableHead>
-          <TableHead>CP</TableHead>
-          <TableHead>SP</TableHead>
-          <TableHead>Discount</TableHead>
           <TableHead>Stock</TableHead>
           <TableHead>Expire In</TableHead>
           <TableHead>Expiry Date</TableHead>
@@ -322,9 +319,6 @@ export function ProductTable() {
               </Link>
             </TableCell>
             <TableCell>{product?.name}</TableCell>
-            <TableCell>{product?.cp}</TableCell>
-            <TableCell>{product?.sp}</TableCell>
-            <TableCell>{product?.discount}</TableCell>
             <TableCell>{product?.stock}</TableCell>
             <TableCell>90 days</TableCell>
             <TableCell>{product?.expiry_date}</TableCell>
