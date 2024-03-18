@@ -1,9 +1,34 @@
-import React from 'react'
-
-const LowExpiryDatePage = () => {
+import React, { Suspense } from "react";
+import { Separator } from "@/components/ui/separator";
+import Search from "@/components/search/search";
+import { Button } from "@/components/ui/button";
+import TablePagination from "@/components/pagination/Pagination";
+import { SupplierTable } from "@/components/table/suppliers/table";
+import { ProductTable } from "@/components/table/products/table";
+import Link from "next/link";
+const LowExpiryDatePahge = () => {
   return (
-    <div>LowExpiryDatePage</div>
-  )
-}
+    <div className="flex flex-col">
+      <h1 className="text-lg font-medium py-1 ">All Products</h1>
+      <Separator />
+      <div className="py-4 flex  justify-between">
+        <Suspense fallback={<div>...</div>}>
+          <Search
+            searchItems={["Search By Id", "Search By Name", "Search By Stock"]}
+          />
+        </Suspense>
+        <div>
+          <TablePagination />
+        </div>
 
-export default LowExpiryDatePage
+        {/* <Button>Button</Button> */}
+        {/* <Button asChild size="default">
+          <Link href="/products/add-product">Add Product</Link>
+        </Button> */}
+      </div>
+      <ProductTable />
+    </div>
+  );
+};
+
+export default LowExpiryDatePahge;
